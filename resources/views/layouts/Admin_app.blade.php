@@ -270,6 +270,9 @@
                     <li>
                         <a href="{{route("section.index")}}"><i class="fa fa-table fa-fw"></i> Sections</a>
                     </li>
+                     <li>
+                        <a href="{{route("user.index")}}"><i class="fa fa-user fa-fw"></i> Users</a>
+                     </li>
                     @endif
                     <li>
                         <a href="{{route("image.index")}}"><i class="fa fa-photo fa-fw"></i> Images</a>
@@ -277,6 +280,7 @@
                     <li>
                         <a href="{{route("post.index")}}"><i class="fa fa-building-o fa-fw"></i> Posts</a>
                     </li>
+
 
                 </ul>
             </div>

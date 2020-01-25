@@ -34,6 +34,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::prefix('Web')->group(function (){
+    Route::get('/Profile','Auth\ProfileCont@update')->name('web.profile');
+    Route::post('/Profile','Auth\ProfileCont@update')->name('web.profile');
+
+
     Route::get('/Main','Web\Main\MainController@index')->name('web.main');
 
     Route::prefix('Section')->group(function () {
@@ -97,4 +101,20 @@ Route::prefix('Admin')->middleware('adminPanel')->group(function (){
         Route::post('Delete/{id}','Admin\Post\PostController@delete')->name('post.delete');
 
     });
+
+    Route::prefix('User')->group(function (){
+        Route::get('/','Admin\User\UserController@index')->name('user.index');
+
+        Route::get('Add','Admin\User\UserController@add')->name('user.add');
+        Route::post('Add','Admin\User\UserController@add')->name('user.add');
+
+        Route::get('Update/{id}','Admin\User\UserController@update')->name('user.update');
+        Route::post('Update/{id}','Admin\User\UserController@update')->name('user.update');
+
+        Route::get('Delete/{id}','Admin\User\UserController@delete')->name('user.delete');
+        Route::post('Delete/{id}','Admin\User\UserController@delete')->name('user.delete');
+
+    });
+
+
 });
