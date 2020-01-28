@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba521af8-b0e2-4faa-ba96-c7b51a2d3876" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/User/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ProfileCont.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/User/Add_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/User/Delete_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/User/Index_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/User/Update_view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Web/Auth/Profile_view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Msg/MsgController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/Msg/MsgController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Lib/MsgContent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/Msg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_26_192145_create_notifications_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Admin/Msg/Index_view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Admin/Msg/Read_view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Web/Msg/Msg_view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/Section/Section_Cont.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/Section/Section_Cont.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/Admin_app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Admin_app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Web_app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Web_app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +178,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Admin/Msg" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -194,11 +192,11 @@
       <recent name="C:\Projects\MyFirstProject\app\Model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/Admin/Msg" />
+      <recent name="$PROJECT_DIR$/resources/views/Web/Msg" />
       <recent name="$PROJECT_DIR$/resources/views/Admin" />
       <recent name="$PROJECT_DIR$/resources/views/Web/Auth" />
       <recent name="$PROJECT_DIR$/resources/views/Register" />
-      <recent name="$PROJECT_DIR$/resources/views/Web" />
-      <recent name="$PROJECT_DIR$/resources/views/Web/Section" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -292,8 +290,16 @@
       <workItem from="1579385510591" duration="1246000" />
       <workItem from="1579522212691" duration="1883000" />
       <workItem from="1579639560741" duration="2395000" />
-      <workItem from="1579890247526" duration="9794000" />
+      <workItem from="1579890247526" duration="25556000" />
     </task>
+    <task id="LOCAL-00001" summary="Add_user_and_profile">
+      <created>1579912487430</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579912487430</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +307,10 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add_user_and_profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add_user_and_profile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="590" y="215" width="800" height="684" key="#Deployment" timestamp="1578485689787">
@@ -323,10 +333,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1579357862051" />
-    <state x="560" y="145" width="860" height="823" key="CommitChangelistDialog2" timestamp="1579893538316">
+    <state x="560" y="145" width="860" height="823" key="CommitChangelistDialog2" timestamp="1579912487108">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="560" y="145" width="860" height="823" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1579893538316" />
+    <state x="560" y="145" width="860" height="823" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1579912487108" />
     <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1579531327581">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -347,6 +357,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1242" height="244" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1579007998181" />
+    <state x="721" y="367" width="537" height="380" key="NewPhpClassDialog" timestamp="1580069812589">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="721" y="367" width="537" height="380" key="NewPhpClassDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1580069812589" />
     <state x="790" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1578168388750">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -355,6 +369,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1578486071300" />
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1579912550964">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1579912550964" />
     <state x="840" y="453" width="309" height="207" key="WebDeployment.AddServerDialog.v.1" timestamp="1578471886038">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

@@ -59,44 +59,22 @@
                     <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-messages">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
+                    @foreach(\Illuminate\Support\Facades\Auth::user()->unReadNotifications as $notificaiton)
+                        <li>
+                            <a href="{{route('msg.read',['id'=>$notificaiton->id])}}">
+                                <div>
+                                    <strong>{{$notificaiton->data['name']}}</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>{{$notificaiton->created_at}}</em>
                                     </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
+                                </div>
+                                <div>{{$notificaiton->data['content']}}</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    @endforeach
                     <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
+                        <a class="text-center" href="{{route('msg.index',['type'=>'all'])}}">
                             <strong>Read All Messages</strong>
                             <i class="fa fa-angle-right"></i>
                         </a>

@@ -34,11 +34,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::prefix('Web')->group(function (){
-    Route::get('/Profile','Auth\ProfileCont@update')->name('web.profile');
-    Route::post('/Profile','Auth\ProfileCont@update')->name('web.profile');
-
 
     Route::get('/Main','Web\Main\MainController@index')->name('web.main');
+
+    Route::get('/ContactUs','Web\Msg\MsgController@send')->name('web.msg');
+    Route::post('/ContactUs','Web\Msg\MsgController@send')->name('web.msg');
+
+    Route::get('/Profile','Auth\ProfileCont@update')->name('web.profile');
+    Route::post('/Profile','Auth\ProfileCont@update')->name('web.profile');
 
     Route::prefix('Section')->group(function () {
         Route::get('/{id}','Web\Section\Section_Cont@index')->name('web.section.index');
@@ -53,7 +56,6 @@ Route::prefix('Web')->group(function (){
         Route::Post('/Comment/{id}','Web\Post\Post_Cont@editComment')->name('web.comment.edit');
 
         Route::get('/Comment/Delete/{id}','Web\Post\Post_Cont@deleteComment')->name('web.comment.delete');
-
 
     });
 });
@@ -113,6 +115,15 @@ Route::prefix('Admin')->middleware('adminPanel')->group(function (){
 
         Route::get('Delete/{id}','Admin\User\UserController@delete')->name('user.delete');
         Route::post('Delete/{id}','Admin\User\UserController@delete')->name('user.delete');
+
+    });
+
+
+    Route::prefix('Msg')->group(function (){
+        Route::post('Delete/{id}','Admin\Msg\MsgController@delete')->name('msg.delete');
+
+        Route::get('/read/{id}','Admin\Msg\MsgController@read')->name('msg.read');
+        Route::get('/{type}','Admin\Msg\MsgController@index')->name('msg.index');
 
     });
 
