@@ -1,7 +1,7 @@
 @extends('layouts.Admin_app')
 
 @section('title')
-    Display User
+    Display Sections
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    DataTables Advanced Tables
+                    All Sections
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(\route('web.main'));
 });
 
 
@@ -62,6 +62,7 @@ Route::prefix('Web')->group(function (){
 
 
 Route::prefix('Admin')->middleware('adminPanel')->group(function (){
+    Route::get('/Main','Admin\Main\MainController@index')->name('main.index');
     Route::prefix('Section')->middleware('adminRole')->group(function (){
 
 

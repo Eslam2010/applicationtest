@@ -63,7 +63,7 @@ class PostController extends Controller
                 $post->update($request->all());
                 $post->Photos()->detach();
                 $post->Photos()->attach($request->input('photos'));
-                return redirect()->back();
+                return redirect()->back()->with('msg','Done');
             } else {
                 $photos = Photo::all();
                 $sections = Section::where('user_id', 'like', $this->getFlag())->get();
@@ -75,7 +75,8 @@ class PostController extends Controller
         }
         else
         {
-            dd('Error No Have Permission');
+            return redirect()->back()->withErrors('Error No Have Permission');
+
         }
     }
 

@@ -12,7 +12,7 @@
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    DataTables Advanced Tables
+                    All Users
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">

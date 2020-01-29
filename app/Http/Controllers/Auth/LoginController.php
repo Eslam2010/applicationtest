@@ -37,7 +37,7 @@ class LoginController extends Controller
         }
         else
         {
-            return "/Admin/Section";
+            return "/Admin/Main";
         }
      }
     /**

@@ -11,7 +11,7 @@
         <div class="col-lg-4">
             <div class="panel panel-red">
                 <div class="panel-heading">
-                    Delete
+                    Delete Image
                 </div>
                 <div class="panel-body">
                     <label>Are you Sure </label>  <br/>

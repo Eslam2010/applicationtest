@@ -76,7 +76,7 @@
 
         <div class="form-group">
             <label>Select Group or User :</label>
-            <select name="to">
+            <select name="to" class="form-control js-example-basic-single">
                 <option value="admin">Admin Group</option>
                 <option value="editor">Editor Group</option>
                 <option value="all">Admin & Editor Group</option>
@@ -89,6 +89,12 @@
         <div class="form-group">
            <button type="submit" class="btn btn-primary" >Send</button>
         </div>
+
+        <script>
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2();
+            });
+        </script>
         </form>
         </div>
     </div>

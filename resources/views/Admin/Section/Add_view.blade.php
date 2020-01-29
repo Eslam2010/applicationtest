@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                     <label>Editor For This Section :</label>
-                    <select name="user_id">
+                    <select name="user_id" class="form-control js-example-basic-single">
                         <option value="">Empty</option>
                         @foreach($users as $user)
                         <option value="{{$user->id}}">{{$user->name}}</option>
@@ -34,6 +34,11 @@
             </div>
         </div>
     </div>
+        <script>
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2();
+            });
+        </script>
     </form>
 
 @endsection
