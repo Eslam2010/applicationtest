@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>@yield('title')</title>
+
     {!! Html::script("Admin/vendor/jquery/jquery.min.js") !!}
 
     {!! Html::style("Admin/vendor/bootstrap/css/bootstrap.min.css") !!}

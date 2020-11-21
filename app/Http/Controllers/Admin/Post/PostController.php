@@ -76,7 +76,6 @@ class PostController extends Controller
         else
         {
             return redirect()->back()->withErrors('Error No Have Permission');
-
         }
     }
 

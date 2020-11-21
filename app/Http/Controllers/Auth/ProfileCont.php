@@ -20,6 +20,7 @@ class ProfileCont extends Controller
                   'name'=>$request->input('name'),
                   'phone'=>$request->input('phone'),
               ]);
+
               if(!is_null($request->input('password')) and $request->input('password')==$request->input('password_confirmation'))
                   {
                       $user->password = Hash::make($request->input('password'));
